@@ -1,5 +1,5 @@
 import express from "express";
-import { login, logout, signup, verifyEmail } from "../controllers/auth.controller.js";
+import { login, logout, signup, verifyEmail, forgotPassword, resetPassword } from "../controllers/auth.controller.js";
 
 
 
@@ -10,6 +10,8 @@ router.post("/login", login)
 router.post("/logout", logout)
 
 router.post("/verify", verifyEmail)
+router.post("/forgot", forgotPassword)
+router.post("/reset/:token", resetPassword)
 
 
 export default router
